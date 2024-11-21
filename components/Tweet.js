@@ -1,13 +1,16 @@
-import styles from '../styles/Tweet.module.css';
+import styles from "../styles/Tweet.module.css";
 
 function Tweet() {
   return (
     <div>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-      </main>
+      <h1 className="titreTweet">Home</h1>
+      <input className={tweetCreate} placeholder="What's up?">
+        {" "}
+      </input>
+      <div className="counterSection">
+        <div className="charCounter"></div>
+        <button className="tweetButton"></button>
+      </div>
     </div>
   );
 }

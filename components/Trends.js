@@ -1,13 +1,13 @@
-import styles from '../styles/Trends.module.css';
+import styles from "../styles/Trends.module.css";
 
 function Trends() {
   return (
     <div>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-      </main>
+      <h1 className={titreTrends}>Trends</h1>
+      <div className={trendsContainer}>
+        <div className={hashtagName}></div>
+        <div className={hashtagCounter}></div>
+      </div>
     </div>
   );
 }
