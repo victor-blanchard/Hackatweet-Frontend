@@ -1,0 +1,29 @@
+.allContainer{
+    background-color: black;
+    color: white;
+}
+/* .modalClosingIcon {
+}
+.logo {
+}
+.ModalMessage {
+}
+.signUpForm {
+} */
+
+.modalUserName {
+    width: 200px;
+}
+.modalPassword {
+    width: 200px;
+}
+.signInButton {
+    background-color: #1da1f2;
+    width: 100px;
+    height: 40px;
+    color: white;
+    border-radius: 20px;
+    border: black;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
