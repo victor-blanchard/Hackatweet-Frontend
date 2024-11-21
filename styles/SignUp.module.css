@@ -5,27 +5,31 @@
 }
 
 /* .logo {
-} */
-/* .ModalMessage {
+   
+}
+.ModalMessage {
     
 } */
 .signUpForm {
 
-    display: flex;
-    flex-direction: row;
+ display: flex;
     margin: 10px;
+    padding: 20px;
 }
 .modalFirstName {
     width: 100px;
-    margin: 10px;
+    margin: 20px;
+    border-radius: 80px;
 }
 .modalUserName {
     width: 100px;
     margin: 10px;
+    border-radius: 20px;
 }
 .modalPassword {
     width: 100px;
     margin: 10px;
+    border-radius: 20px;
 }
 .signUpButton {
     background-color: #1da1f2;
@@ -36,4 +40,5 @@
     border: black;
     font-size: 12px;
     margin-top: 20px;
-}
+    cursor: pointer;
+} 

@@ -5,6 +5,7 @@
 /* .modalClosingIcon {
 }
 .logo {
+
 }
 .ModalMessage {
 }
@@ -13,9 +14,11 @@
 
 .modalUserName {
     width: 200px;
+    border-radius: 20px;
 }
 .modalPassword {
     width: 200px;
+    border-radius: 0px;
 }
 .signInButton {
     background-color: #1da1f2;
@@ -26,4 +29,5 @@
     border: black;
     font-size: 12px;
     margin-bottom: 20px;
+    cursor: pointer;
 }

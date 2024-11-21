@@ -4,6 +4,7 @@ import { Button, Modal } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
+import Link from "react";
 
 function Login() {
   const [isModalVisible, setIsModalVisible] = useState("homepage");
@@ -22,7 +23,7 @@ function Login() {
       <div className={styles.allPage}>
         <div className={styles.landingPageLeftSide}></div>
         <div className={styles.landingPageRightSection}>
-          <img className={styles.logo} src="logo.svg" />
+          <img className={styles.logo} src="logo.svg" href="index.js" />
           <h1 className={styles.landingPageWelcomeMessage}>
             See what's happening
           </h1>
