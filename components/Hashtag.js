@@ -3,8 +3,8 @@ import styles from '../styles/Hashtag.module.css';
 function Hashtag() {
   return (
     <div>
-    <h1 className="titreHashtag">Hashtag</h1>
-    <input className={hashtagSearch}>
+    <h1 className={styles.titreHashtag}>Hashtag</h1>
+    <input className={styles.hashtagSearch}>
       {" "}
     </input>
     

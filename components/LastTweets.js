@@ -3,19 +3,19 @@ import styles from "../styles/LastTweets.module.css";
 function LastTweets() {
   return (
     <div>
-      <div className={tweetContainer}>
-        <div className={tweetHeader}>
-          <img src="" className={userPhoto} />
-          <text className={userFirstName}></text>
-          <text className={tweetedTime}></text>
+      <div className={styles.tweetContainer}>
+        <div className={styles.tweetHeader}>
+          <img src="" className={styles.userPhoto} />
+          <text className={styles.userFirstName}></text>
+          <text className={styles.tweetedTime}></text>
         </div>
-        <div className={tweetAndHastag}>
-          <div className={tweetName}></div>
-          <div className={hashtag}></div>
+        <div className={styles.tweetAndHastag}>
+          <div className={styles.tweetName}></div>
+          <div className={styles.hashtag}></div>
         </div>
-        <div className={likesAndCounts}>
-          <div className={likes}></div>
-          <div className={likes_counter}></div>
+        <div className={styles.likesAndCounts}>
+          <div className={styles.likes}></div>
+          <div className={styles.likes_counter}></div>
         </div>
       </div>
     </div>

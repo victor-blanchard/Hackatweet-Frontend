@@ -4,12 +4,12 @@ function Home() {
   return (
     <div>
       <img className={styles.logo} src="logo.svg" href="index.js" />
-      <div className={userInfos}>
-        <img className={userPhoto} src=""></img>
-        <text className={userFirstName}></text>
-        <text className={userName}></text>
+      <div className={styles.userInfos}>
+        <img className={styles.userPhoto} src=""></img>
+        <text className={styles.userFirstName}></text>
+        <text className={styles.userName}></text>
       </div>
-      <button className={logout}>Log out</button>
+      <button className={styles.logout}>Log out</button>
     </div>
   );
 }

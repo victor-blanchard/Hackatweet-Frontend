@@ -3,10 +3,10 @@ import styles from "../styles/Trends.module.css";
 function Trends() {
   return (
     <div>
-      <h1 className={titreTrends}>Trends</h1>
-      <div className={trendsContainer}>
-        <div className={hashtagName}></div>
-        <div className={hashtagCounter}></div>
+      <h1 className={styles.titreTrends}>Trends</h1>
+      <div className={styles.trendsContainer}>
+        <div className={styles.hashtagName}></div>
+        <div className={styles.hashtagCounter}></div>
       </div>
     </div>
   );
