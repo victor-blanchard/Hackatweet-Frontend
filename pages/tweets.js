@@ -1,7 +1,18 @@
-import Login from '../components/Login';
+import Hashtag from "../components/Hashtag";
+import LastTweets from "../components/LastTweets";
+import Trends from "../components/Trends";
+import Tweet from "../components/Tweet";
+import Home from "../components/Home";
 
-function Tweets() {
-  return <Home />;
+function pageTweets() {
+  return (
+    <div>
+      <Home />
+      <Tweet />
+      <LastTweets />
+      <Trends />
+    </div>
+  );
 }
 
-export default Tweets;
+export default pageTweets;
