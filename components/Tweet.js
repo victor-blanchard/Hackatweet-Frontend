@@ -1,6 +1,7 @@
 import styles from "../styles/Tweet.module.css";
+import { useDispatch, useSelector } from "react-redux";
 
-import React from "react";
+import React, { useState } from "react";
 import "antd/dist/reset.css";
 import { Button } from "antd";
 import { Input } from "antd";
@@ -8,6 +9,27 @@ import { Flex } from "antd";
 import { Textarea } from "antd";
 
 function Tweet() {
+  const [tweetContent, setTweetContent] = useState("");
+  const user = useSelector((state) => state.user.value);
+  let handleTweet = () => {
+    fetch("http://localhost:3000/tweets/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userName: user.userName,
+        tweetName: tweetContent,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result) {
+          setTweetContent("");
+        }
+        if (!data.result) {
+          console.log("tweet not saved");
+        }
+      });
+  };
   const Textarea = Input;
   return (
     <>
@@ -15,6 +37,8 @@ function Tweet() {
         <h1 className={styles.titreTweet}>Home</h1>
         <div className={styles.TextButton}>
           <Textarea
+            onChange={(e) => setTweetContent(e.target.value)}
+            value={tweetContent}
             showCount
             maxLength={280}
             className={styles.tweetCreate}
@@ -22,7 +46,9 @@ function Tweet() {
             cols="30"
             rows="3"
           ></Textarea>
-          <Button className={styles.tweetButton}>Tweet</Button>
+          <Button className={styles.tweetButton} onClick={() => handleTweet()}>
+            Tweet
+          </Button>
         </div>
       </div>
     </>
