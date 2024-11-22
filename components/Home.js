@@ -3,10 +3,19 @@ import { useDispatch, useSelector } from "react-redux";
 import React, { useState } from "react";
 import { login, logout } from "../reducers/user";
 
+
 function Home() {
+
+
+const [signInUsername, setsignInUsername] = useState("");
+const [signInPassword, setsignInPassword] = useState("");
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
   console.log(user);
+  function handleLogOut() {
+    window.location.href = "/";
+    dispatch(logout());
+  }
 
   return (
     <div className={styles.allOfHome}>
@@ -19,7 +28,9 @@ function Home() {
             <text className={styles.userName}>@{user.userName} </text>
           </div>
         </div>
-        <button className={styles.logout}>Log out</button>
+        <button className={styles.logout} onClick={() => handleLogOut()}>
+          Log out
+        </button>
       </div>
     </div>
   );
