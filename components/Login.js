@@ -5,8 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Link from "react";
+import { userSlice } from "../reducers/user";
 
 function Login() {
+  const user = useSelector((state) => state.user.value);
+  console.log(user);
   const [isModalVisible, setIsModalVisible] = useState("homepage");
   const handleSignUpClick = () => {
     setIsModalVisible("signUp");

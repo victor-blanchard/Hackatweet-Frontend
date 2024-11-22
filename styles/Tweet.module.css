@@ -1,0 +1,23 @@
+.TextButton {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.tweetCreate {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  height: 15vh;
+  border-radius: 20px;
+}
+.tweetButton {
+  margin-top: 10px;
+  background-color: #00b9ff;
+  color: white;
+  border: 0px;
+  font-size: 20px;
+  width: 100px;
+  border-radius: 30px;
+}
