@@ -1,22 +1,48 @@
-.main {
+.allOfHome {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 4px;
+  background-color: black;
+}
+.logo {
+  width: 40px;
+}
+.userInfoAndLogout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 4px;
+}
+.userInfos {
+  display: flex;
+}
+.userFirstNameAndLastName {
+  display: flex;
+  flex-direction: row;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.userPhoto {
+  width: 30px;
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.userFirstName {
+  size: 8px;
+  color: white;
 }
+.userName {
+  size: 5px;
+  color:gray
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+}
+.logout {
+  background-color: black;
+  width: 80px;
+  height: 30px;
+  color: white;
+  border-radius: 40px;
+  border-color: white;
+  font-size: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+
 }
