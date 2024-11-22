@@ -10,26 +10,25 @@ function Login() {
   const [isModalVisible, setIsModalVisible] = useState("homepage");
   const handleSignUpClick = () => {
     setIsModalVisible("signUp");
-    console.log(isModalVisible)
+    console.log(isModalVisible);
   };
 
   const handleSignInClick = () => {
     setIsModalVisible("signIn");
-    console.log(isModalVisible)
+    console.log(isModalVisible);
   };
-  console.log(isModalVisible)
+
+  const handleHomepageClick = () => {
+    setIsModalVisible("homepage");
+  };
   if (isModalVisible == "homepage")
     return (
       <div className={styles.allPage}>
         <div className={styles.landingPageLeftSide}></div>
         <div className={styles.landingPageRightSection}>
           <img className={styles.logo} src="logo.svg" href="index.js" />
-          <h1 className={styles.landingPageWelcomeMessage}>
-            See what's happening
-          </h1>
-          <h2 className={styles.landingPageWelcomeMessageDetail}>
-            Join Hackatweet today.
-          </h2>
+          <h1 className={styles.landingPageWelcomeMessage}>See what's happening</h1>
+          <h2 className={styles.landingPageWelcomeMessageDetail}>Join Hackatweet today.</h2>
           <div className={styles.buttonContainerLandingPage}>
             <button
               className={styles.signUpButton}
@@ -60,7 +59,6 @@ function Login() {
           <div className={styles.landingPageLeftSide}></div>
           <div className={styles.landingPageRightSection}>
             <div>
-             
               <SignUp />
             </div>
           </div>
@@ -74,7 +72,6 @@ function Login() {
           <div className={styles.landingPageLeftSide}></div>
           <div className={styles.landingPageRightSection}>
             <div>
-             
               <SignIn />
             </div>
           </div>

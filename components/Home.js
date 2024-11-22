@@ -1,6 +1,10 @@
 import styles from "../styles/Home.module.css";
+import { useDispatch, useSelector } from "react-redux";
 
 function Home() {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.value);
+
   return (
     <div>
       <img className={styles.logo} src="logo.svg" href="index.js" />
