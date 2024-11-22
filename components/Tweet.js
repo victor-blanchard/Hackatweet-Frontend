@@ -24,6 +24,7 @@ function Tweet() {
       .then((data) => {
         if (data.result) {
           setTweetContent("");
+          window.location.href = "/tweets";
         }
         if (!data.result) {
           console.log("tweet not saved");
@@ -39,6 +40,7 @@ function Tweet() {
           <Textarea
             onChange={(e) => setTweetContent(e.target.value)}
             value={tweetContent}
+            focus
             showCount
             maxLength={280}
             className={styles.tweetCreate}

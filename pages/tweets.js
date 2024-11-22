@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "antd";
 
 function pageTweets() {
+  const [sharedState, setSharedState] = useState("");
   const [connected, setConnected] = useState(false);
   const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
