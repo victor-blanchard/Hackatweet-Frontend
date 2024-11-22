@@ -20,14 +20,14 @@ function pageTweets() {
 
   return (
     <>
-      {connected ? (
+      {true ? (
         <div className={styles.allPage}>
           <div className={styles.Home}>
             <Home />
           </div>
           <div className={styles.TweetContainer}>
             <Tweet />
-            <LastTweets />
+            <LastTweets /> 
           </div>
           <div className={styles.TrendsContainer}>
             <Trends />
