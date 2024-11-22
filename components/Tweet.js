@@ -31,6 +31,11 @@ function Tweet() {
         }
       });
   };
+  const handleKeyDown = (event) => {
+    if (event.key == "Enter") {
+      handleTweet();
+    }
+  };
   const Textarea = Input;
   return (
     <>
@@ -38,6 +43,7 @@ function Tweet() {
         <h1 className={styles.titreTweet}>Home</h1>
         <div className={styles.TextButton}>
           <Textarea
+            onKeyDown={handleKeyDown}
             onChange={(e) => setTweetContent(e.target.value)}
             value={tweetContent}
             focus
