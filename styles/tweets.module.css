@@ -1,0 +1,25 @@
+.allPage {
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.Home {
+  background-color: rgb(0, 0, 0);
+  grid-column: 1 / 3;
+  grid-row: 1 / 4;
+}
+.TweetContainer {
+  background-color: blue;
+  grid-column: 3 / 6;
+  grid-row: 1 / 4;
+}
+.TrendsContainer {
+  background-color: blueviolet;
+  grid-column: 6 / 8;
+  grid-row: 1 / 4;
+}

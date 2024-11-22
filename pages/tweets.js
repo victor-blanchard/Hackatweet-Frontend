@@ -1,3 +1,4 @@
+import styles from "../styles/tweets.module.css";
 import Hashtag from "../components/Hashtag";
 import LastTweets from "../components/LastTweets";
 import React, { useState } from "react";
@@ -7,7 +8,7 @@ import Home from "../components/Home";
 import { useDispatch, useSelector } from "react-redux";
 
 function pageTweets() {
-  const [connected, setConnected] = useState(false);
+  const [connected, setConnected] = useState(true);
   const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
 
@@ -18,12 +19,27 @@ function pageTweets() {
   console.log(user);
 
   return (
-    <div>
-      <Home />
-      <Tweet />
-      <LastTweets />
-      <Trends />
-    </div>
+    <>
+      {connected ? (
+        <div className={styles.allPage}>
+          <div className={styles.Home}>
+            <Home />
+          </div>
+          <div className={styles.TweetContainer}>
+            <Tweet />
+            <LastTweets />
+          </div>
+          <div className={styles.TrendsContainer}>
+            <Trends />
+          </div>
+        </div>
+      ) : (
+        <div>
+          <h1>Your are not connected</h1>
+          <link href="index" />
+        </div>
+      )}
+    </>
   );
 }
 
